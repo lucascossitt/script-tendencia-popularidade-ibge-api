@@ -17,7 +17,7 @@ rl.question('Insira 2 ou mais nomes separados por virgula: ', async input => {
             const mudancas = await calcularMudancaPercentual(dados)
             console.log(`Nome: ${nome}`);
             mudancas.forEach(({decada, mudanca}) => {
-                console.log(`Década: ${decada} -> Mudança percentual: ${mudanca.toFixed(2)}%`)
+                console.log(`Década: ${decada.replaceAll("[", "").replaceAll("]", "")} -> Mudança percentual: ${mudanca.toFixed(2)}%`)
             })
         } else {
             console.log(`Nenhum dado encontrado para o nome: ${nome}`)
