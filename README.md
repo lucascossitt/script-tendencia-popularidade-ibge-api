@@ -1,0 +1,1 @@
+# script-tendencia-popularidade-ibge-api
