@@ -8,13 +8,10 @@ const rl = readline.createInterface({
 })
 
 rl.question('Insira 2 ou mais nomes separados por virgula: ', async input => {
-    console.log('input', input)
     const nomes = input.split(',').map(nome => nome.trim())
 
     for await (let nome of nomes) {
-        console.log('nome', nome)
         const dados = await getDadosIBGE(nome)
-        console.log(dados)
         
         if (dados) {
             const mudancas = await calcularMudancaPercentual(dados)
